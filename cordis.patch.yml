@@ -1,0 +1,13 @@
+# dsh-qq-bridge（npm 包 @wuweizhi/dsh-qq-bridge）
+#
+# 这个文件把插件挂进 profile：profile 的 package.json 里 dsh.profile.bundles
+# 列到这个包名时，这一层 patch 就会被应用。
+#
+# ★ 作用域包（@scope/name）的写法：id 用短名，name 用完整包名。
+#   参考已装的 @michengai/dsh-skills-manager（id: skills-manager / name: '@michengai/...'）。
+#   注意：客户端 bundle 里的 load id 必须等于**完整包名**，这里改名了那边也要改。
+#
+# 配置不走这里：插件自己读 $DSH_HOME/qq-bridge/config.json。
+- insert:
+    - id: qq-bridge
+      name: '@wuweizhi/dsh-qq-bridge'

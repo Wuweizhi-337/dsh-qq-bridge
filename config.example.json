@@ -1,0 +1,85 @@
+{
+  "enabled": true,
+  "napcat": {
+    "url": "ws://127.0.0.1:3001",
+    "accessToken": "PUT_YOUR_NAPCAT_TOKEN_HERE",
+    "launcher": "",
+    "qrPath": ""
+  },
+  "model": {
+    "provider": "",
+    "model": "",
+    "reasoningEffort": "low",
+    "maxTokens": 10000,
+    "temperature": 0.8,
+    "historyMode": "messages"
+  },
+  "persona": {
+    "name": "助手",
+    "system": "你叫「助手」，住在这台电脑里。说话短、直接，不解释、不追问。别人问你是什么，就说你住在这儿。",
+    "aliases": [
+      "助手"
+    ],
+    "anchors": []
+  },
+  "reply": {
+    "groups": true,
+    "private": false,
+    "requireAt": false,
+    "maxChars": 70,
+    "splitAt": 400,
+    "atSenderChance": 60,
+    "maxAts": 1,
+    "allowSilence": true,
+    "turn": {
+      "enabled": true,
+      "window": 12,
+      "questionWaitSec": 10,
+      "waitRetrySec": 30,
+      "cooldownSec": 45,
+      "judgeMaxTokens": 160,
+      "judgePersonaChars": 500
+    }
+  },
+  "memory": {
+    "keepRounds": 20,
+    "summarize": true,
+    "summaryMaxTokens": 1536,
+    "summaryBudgetChars": 2000,
+    "summaryInjectChars": 1200,
+    "recallLimit": 2,
+    "recallMinScore": 0.35,
+    "relationEvolveEvery": 30,
+    "daySummaryLines": 60,
+    "topicHookMinScore": 0.4,
+    "hotReload": true,
+    "extractFacts": true,
+    "factsMaxTokens": 20000
+  },
+  "people": {
+    "enabled": true,
+    "maxInRoster": 30,
+    "dir": "",
+    "maxBytes": 10240
+  },
+  "vision": {
+    "enabled": true,
+    "maxImages": 2
+  },
+  "proactive": {
+    "enabled": false,
+    "cooldownSec": 120,
+    "maxPerHour": 6,
+    "maxPerDay": 30,
+    "quietStart": 0,
+    "quietEnd": 0
+  },
+  "ui": {
+    "intro": "",
+    "note": ""
+  },
+  "blacklist": {
+    "groups": [],
+    "users": []
+  }
+}

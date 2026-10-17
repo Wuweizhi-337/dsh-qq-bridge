@@ -1,0 +1,64 @@
+{
+  "name": "@wuweizhi/dsh-qq-bridge",
+  "version": "0.4.5",
+  "private": false,
+  "type": "module",
+  "main": "lib/index.js",
+  "description": "DSH plugin: bridge QQ group chat + private chat (NapCat / OneBot 11) to a DSH model — persona, per-person profiles, decaying long-term memory, turn-based reply decisions. Personal learning project; chat only, no tools.",
+  "license": "MIT",
+  "author": "无为治",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wuweizhi-337/dsh-qq-bridge.git"
+  },
+  "homepage": "https://github.com/Wuweizhi-337/dsh-qq-bridge#readme",
+  "bugs": {
+    "url": "https://github.com/Wuweizhi-337/dsh-qq-bridge/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "qq",
+    "qqbot",
+    "napcat",
+    "onebot",
+    "chatbot",
+    "memory"
+  ],
+  "files": [
+    "lib",
+    "scripts",
+    "cordis.patch.yml",
+    "config.example.json",
+    "README.md",
+    "CHANGELOG.md",
+    "RELEASING.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "preflight": "node scripts/preflight.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    }
+  }
+}

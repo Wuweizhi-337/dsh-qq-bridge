@@ -1,0 +1,15 @@
+node_modules/
+*.log
+*.tmp
+*.bak
+*.bak-*
+
+# 运行期数据，绝不提交
+config.json
+memory.json
+memory-store.json
+pending-notes.md
+pending-seen.json
+people/
+stickers/
+rounds-archive.md
